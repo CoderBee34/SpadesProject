@@ -4,14 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="660629e3-1b77-4c3f-a671-a604d3edc309" name="Changes" comment="First version" />
+    <list default="true" id="660629e3-1b77-4c3f-a671-a604d3edc309" name="Changes" comment="test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/linkedList/LinkedListCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/linkedList/LinkedListPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/player/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/spadeGame/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/spadeGame/GameUtilities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/spadeGame/SpadeGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/AppData/Local/Programs/Eclipse Adoptium/jdk-17.0.5.8-hotspot/lib/src.zip!/java.base/java/lang/String.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -35,6 +54,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -47,6 +74,8 @@
       <option name="presentableId" value="Default" />
       <updated>1679170926430</updated>
       <workItem from="1679170927513" duration="177000" />
+      <workItem from="1679171198436" duration="556000" />
+      <workItem from="1679338561278" duration="3001000" />
     </task>
     <task id="LOCAL-00001" summary="First version">
       <created>1679170995374</created>
@@ -55,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679170995374</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test">
+      <created>1679171212476</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679171212476</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -63,6 +99,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First version" />
-    <option name="LAST_COMMIT_MESSAGE" value="First version" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>
