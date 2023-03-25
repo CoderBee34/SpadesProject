@@ -2,7 +2,7 @@ package spadeGame;
 
 public class Card {
     private int value;
-    private String suit;
+    private CardSuit suit;
 
     /**
      * Constructs the card by taking its value and suit type
@@ -10,7 +10,7 @@ public class Card {
      * @param value value of the card by number
      * @param suit  suit of the card can be club, diamond, heart and spade.
      */
-    public Card(int value, String suit) {}
+    public Card(int value, CardSuit suit) {}
 
     /**
      * @return returns the suit type of card as string
