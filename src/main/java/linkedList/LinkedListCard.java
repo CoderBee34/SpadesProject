@@ -1,4 +1,6 @@
 package linkedList;
 
-public abstract class LinkedListCard {
+public class LinkedListCard {
+    int size;
+
 }

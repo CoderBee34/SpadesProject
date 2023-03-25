@@ -1,6 +1,6 @@
 package spadeGame;
 
-public abstract class Card {
+public class Card {
     private int value;
     private String suit;
 
@@ -15,11 +15,15 @@ public abstract class Card {
     /**
      * @return returns the suit type of card as string
      */
-    public abstract String getSuit();
+    public String getSuit(){
+        return null;
+    }
 
     /**
      * @return returns the value of card as number
      */
-    public abstract int getValue();
+    public int getValue(){
+        return 0;
+    }
 
 }

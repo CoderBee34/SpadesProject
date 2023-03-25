@@ -2,36 +2,81 @@ package player;
 
 import linkedList.LinkedListCard;
 
-/**
- * @
- *
- */
 
-public abstract class Player {
+public class Player {
 
     private String name;
     private int score;
     private int bid;
     private LinkedListCard hand;
+    private PlayerType playerType;
 
     /**
      *
-     * @param name in order to seperate players from each other
+     * @param name in order to separate players from each other
+     * @param playerType in order to know the type of player
      *
      */
-    public Player(String name) {
+    public Player(String name, PlayerType playerType) {
     }
 
-    public abstract int getBid();
+    /**
+     *
+     * @return returns the number of bidding of player
+     */
 
-    public abstract void setBid(int bid);
+    public int getBid(){
+        return 0;
+    }
 
-    public abstract int getScore();
+    /**
+     *
+     * @param bid sets number of bidding to player
+     */
 
-    public abstract void setScore(int score);
+    public void setBid(int bid){
+    }
 
-    public abstract LinkedListCard getHand();
-    public abstract void setHand(LinkedListCard hand);
+    /**
+     *
+     * @return returns the score of player
+     */
 
-    public abstract String getName();
+    public int getScore(){
+        return 0;
+    }
+
+    /**
+     *
+     * @param score sets the score of player
+     */
+
+    public void setScore(int score){
+    }
+
+    /**
+     *
+     * @return returns cards of player in a linked list
+     *
+     */
+
+    public LinkedListCard getHand(){
+        return null;
+    }
+
+    /**
+     *
+     * @param hand give a hand to player
+     */
+    public void setHand(LinkedListCard hand){
+    }
+
+    /**
+     *
+     * @return returns the name of the player
+     */
+
+    public String getName(){
+        return null;
+    }
 }

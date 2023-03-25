@@ -4,14 +4,42 @@ import linkedList.LinkedListCard;
 import linkedList.LinkedListPlayer;
 import player.Player;
 
-public abstract class GameUtilities {
+public class GameUtilities {
 
-    public abstract LinkedListCard generateDeck();
+    /**
+     *
+     * @return returns a deck of 52 cards
+     */
 
-    public abstract LinkedListPlayer generatePlayers();
+    public LinkedListCard generateDeck(){
+        return null;
+    }
 
-    public abstract Card playCardAI(Player player);
+    /**
+     *
+     * @return returns 4 players to initialize the game
+     */
 
-    public abstract void printHand(Player player);
+    public LinkedListPlayer generatePlayers(){
+        return null;
+    }
+
+    /**
+     *
+     * @param player which player is going to play
+     * @return returns the card that player by given player
+     */
+
+    public Card playCardAI(Player player){
+        return null;
+    }
+
+    /**
+     *
+     * @param player prints the hand of the player
+     */
+    public void printHand(Player player){
+
+    }
 
 }
