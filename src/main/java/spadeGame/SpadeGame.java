@@ -3,19 +3,19 @@ package spadeGame;
 import linkedList.LinkedListCard;
 import linkedList.LinkedListPlayer;
 
-public abstract class SpadeGame {
+public class SpadeGame {
 
     private LinkedListPlayer players;
     private LinkedListCard deck;
+    private GameUtilities gameUtilities;
 
     public SpadeGame(){}
 
-    public abstract void run();
+    public void run(){}
 
-    abstract void playRound();
-    abstract void playTrick();
+    private void playRound(){}
+    private void playTrick(){}
 
-    abstract void printGame();
 
 
 }

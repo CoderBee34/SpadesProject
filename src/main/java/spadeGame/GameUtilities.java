@@ -42,4 +42,11 @@ public class GameUtilities {
 
     }
 
+    /**
+     * prints the all hands of players and the current card on the desk
+     */
+    private void printGame(){
+
+    }
+
 }
