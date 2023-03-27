@@ -79,4 +79,13 @@ public class Player {
     public String getName(){
         return null;
     }
+
+    /**
+     *
+     * @return returns the information of the player as string
+     */
+    public String toString(){
+        return null;
+    }
+
 }

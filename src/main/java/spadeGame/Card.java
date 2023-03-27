@@ -26,4 +26,11 @@ public class Card {
         return 0;
     }
 
+    /**
+     *
+     * @return returns the information of the card such as suit and value as string
+     */
+    public String toString(){
+        return null;
+    }
 }

@@ -38,7 +38,7 @@ public class LinkedList {
 
     /**
      *
-     * @param newNode inserts the given node to the beginnig of the list
+     * @param newNode inserts the given node to the beginning of the list
      */
     public void insertFirst(Node newNode) {
 

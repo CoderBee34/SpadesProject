@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="660629e3-1b77-4c3f-a671-a604d3edc309" name="Changes" comment="version 0.4.13&#10;CardType enum class added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/linkedList/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/linkedList/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/linkedList/NodeCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/linkedList/NodePlayer.java" afterDir="false" />
+    <list default="true" id="660629e3-1b77-4c3f-a671-a604d3edc309" name="Changes" comment="version 0.5.13&#10;Linkedlist and node done and some comments added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/LinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/LinkedListCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/LinkedListCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spadeGame/GameUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spadeGame/GameUtilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spadeGame/SpadeGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spadeGame/SpadeGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/NodeCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/NodeCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spadeGame/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spadeGame/Card.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +75,8 @@
       <workItem from="1679171198436" duration="556000" />
       <workItem from="1679338561278" duration="3639000" />
       <workItem from="1679785576474" duration="2339000" />
-      <workItem from="1679829877660" duration="1791000" />
+      <workItem from="1679829877660" duration="1871000" />
+      <workItem from="1679947151022" duration="836000" />
     </task>
     <task id="LOCAL-00001" summary="First version">
       <created>1679170995374</created>
@@ -114,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679787701898</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="version 0.5.13&#10;Linkedlist and node done and some comments added">
+      <created>1679831750614</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679831750614</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +132,7 @@
     <MESSAGE value="version 0.3.23" />
     <MESSAGE value="version 0.4.12&#10;some comments added" />
     <MESSAGE value="version 0.4.13&#10;CardType enum class added" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 0.4.13&#10;CardType enum class added" />
+    <MESSAGE value="version 0.5.13&#10;Linkedlist and node done and some comments added" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 0.5.13&#10;Linkedlist and node done and some comments added" />
   </component>
 </project>
