@@ -7,6 +7,7 @@ public class Player {
 
     private String name;
     private int score;
+    private int numOfTrickWins;
     private int bid;
     private LinkedListCard hand;
     private PlayerType playerType;

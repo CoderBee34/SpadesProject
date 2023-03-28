@@ -54,6 +54,12 @@ public class GameUtilities {
         return null;
     }
 
+    /**
+     * calculates the scores of the players as given in the project description
+     */
+    public void calculateScores(LinkedListPlayer players){
+
+    }
 
 
 }
