@@ -7,7 +7,7 @@ public class Player {
 
     private String name;
     private int score;
-    private int numOfTrickWins;
+    private int numOfTrickWon;
     private int bid;
     private LinkedListCard hand;
     private PlayerType playerType;
@@ -77,6 +77,29 @@ public class Player {
 
     public String getName(){
         return null;
+    }
+
+    /**
+     *
+     * @return returns the type of player either AI or real
+     */
+    public PlayerType getPlayerType() {
+        return null;
+    }
+
+    /**
+     *
+     * @return returns the number of trick won byplayer
+     */
+    public int getNumOfTrickWon() {
+        return 0;
+    }
+
+    /**
+     *
+     * @param numOfTrickWon sets number of trick won by given parameter
+     */
+    public void setNumOfTrickWon(int numOfTrickWon) {
     }
 
     /**
