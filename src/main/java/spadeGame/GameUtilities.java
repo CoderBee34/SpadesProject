@@ -26,27 +26,34 @@ public class GameUtilities {
 
     /**
      *
+     * @param isSpadeBreaken considering this information card will be played
      * @param player which player is going to play
-     * @return returns the card that player by given player
+     * @return returns the card that played by given player
      */
 
-    public Card playCardAI(Player player){
+    public Card playCard(Player player, boolean isSpadeBreaken){
         return null;
+    }
+
+
+    /**
+     * Sets player ready for the next round by dealing cards and making bids
+     * @param players players that will be ready for next trick
+     * @param deck deck will be
+     */
+    public void setPlayersReady(LinkedListPlayer players, LinkedListCard deck){
+
     }
 
     /**
      *
-     * @param player prints the hand of the player
+     * @param players players that will be checked
+     * @return returns the player that won if no one won the game then returns null
      */
-    public void printHand(Player player){
-
+    public Player isThereWinner(LinkedListPlayer players){
+        return null;
     }
 
-    /**
-     * prints the all hands of players and the current card on the desk
-     */
-    private void printGame(){
 
-    }
 
 }

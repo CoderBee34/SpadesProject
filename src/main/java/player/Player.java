@@ -15,7 +15,6 @@ public class Player {
      *
      * @param name in order to separate players from each other
      * @param playerType in order to know the type of player
-     *
      */
     public Player(String name, PlayerType playerType) {
     }
@@ -57,7 +56,6 @@ public class Player {
     /**
      *
      * @return returns cards of player in a linked list
-     *
      */
 
     public LinkedListCard getHand(){
