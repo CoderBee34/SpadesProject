@@ -11,6 +11,8 @@ public class NodeCard {
      * @param data date that node will contain
      */
     public NodeCard(Card data){
+        this.data = data;
+        next = null;
 
     }
 
@@ -19,7 +21,7 @@ public class NodeCard {
      * @param next nodecard will be linked to this nodecard as next
      */
     public void setNext(NodeCard next){
-
+        this.next = next;
     }
 
     /**
@@ -27,7 +29,7 @@ public class NodeCard {
      * @return returns the next nodecard
      */
     public NodeCard getNext(){
-        return null;
+        return next;
     }
 
     /**
@@ -35,6 +37,6 @@ public class NodeCard {
      * @return returns the data of the nodecard
      */
     public Card getData(){
-        return null;
+        return data;
     }
 }

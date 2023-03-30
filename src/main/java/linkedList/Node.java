@@ -9,7 +9,7 @@ public class Node {
      * @param data date that node will contain
      */
     public Node(int data){
-
+        this.data = data;
     }
 
     /**
@@ -17,7 +17,7 @@ public class Node {
      * @param next node will be linked to this node as next
      */
     public void setNext(Node next){
-
+        this.next = next;
     }
 
     /**
@@ -25,7 +25,7 @@ public class Node {
      * @return returns the next node
      */
     public Node getNext(){
-        return null;
+        return next;
     }
 
     /**
@@ -33,7 +33,7 @@ public class Node {
      * @return returns the data of the node
      */
     public int getData(){
-        return 0;
+        return data;
     }
 
 }

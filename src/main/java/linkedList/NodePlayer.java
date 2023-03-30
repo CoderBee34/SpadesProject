@@ -11,6 +11,8 @@ public class NodePlayer {
      * @param data date that node will contain
      */
     public NodePlayer(Player data){
+        this.data = data;
+        next = null;
     }
 
     /**
@@ -18,7 +20,7 @@ public class NodePlayer {
      * @param next node will be linked to this node as next
      */
     public void setNext(NodePlayer next){
-
+        this.next = next;
     }
 
     /**
@@ -26,7 +28,7 @@ public class NodePlayer {
      * @return returns the next node
      */
     public NodePlayer getNext(){
-        return null;
+        return next;
     }
 
     /**
@@ -34,7 +36,7 @@ public class NodePlayer {
      * @return returns the data of the node
      */
     public Player getData(){
-        return null;
+        return data;
     }
 
 }
