@@ -2,17 +2,29 @@ package spadeGame;
 
 import linkedList.LinkedListCard;
 import linkedList.LinkedListPlayer;
+import linkedList.NodeCard;
+import linkedList.NodePlayer;
 import player.Player;
+import player.PlayerType;
 
 public class GameUtilities {
 
     /**
      *
-     * @return returns a deck of 52 cards
+     * @return returns a deck of 52 cards for every suit creates 13 cards
      */
 
     public LinkedListCard generateDeck(){
-        return null;
+        LinkedListCard cardDeck = new LinkedListCard();
+        CardSuit[] suits = {CardSuit.CLUB, CardSuit.DIAMOND, CardSuit.HEART, CardSuit.SPADE};
+
+        for (int i = 0; i< suits.length;i++){
+            for (int j = 2; j < 15; j++){
+                cardDeck.insertFirst(new NodeCard(new Card(j, suits[i])));
+            }
+        }
+
+        return cardDeck;
     }
 
     /**
@@ -21,7 +33,16 @@ public class GameUtilities {
      */
 
     public LinkedListPlayer generatePlayers(){
-        return null;
+
+        LinkedListPlayer players = new LinkedListPlayer();
+
+        for (int i = 0; i < 3; i++){
+            players.insertFirst(new NodePlayer(new Player(("playerAI"+(i+1)),PlayerType.PLAYER_AI)));
+        }
+
+        players.insertFirst(new NodePlayer(new Player("real", PlayerType.PLAYER_REAL)));
+
+        return players;
     }
 
     /**
@@ -58,6 +79,7 @@ public class GameUtilities {
      * calculates the scores of the players as given in the project description
      */
     public void calculateScores(LinkedListPlayer players){
+
 
     }
 

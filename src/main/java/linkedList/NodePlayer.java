@@ -4,20 +4,20 @@ import player.Player;
 
 public class NodePlayer {
     private Player data;
-    private Node next;
+    private NodePlayer next;
 
     /**
      * construct the node by initializing its attributes
      * @param data date that node will contain
      */
-    public NodePlayer(int data){
+    public NodePlayer(Player data){
     }
 
     /**
      * set a link to the next node
      * @param next node will be linked to this node as next
      */
-    public void setNext(Node next){
+    public void setNext(NodePlayer next){
 
     }
 
