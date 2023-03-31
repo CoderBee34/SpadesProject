@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="660629e3-1b77-4c3f-a671-a604d3edc309" name="Changes" comment="version 1.0.1&#10;Player.getNumOfTrickWon, Player.getPlayerType and Player.setNumOfTrickWon methods added to player">
+    <list default="true" id="660629e3-1b77-4c3f-a671-a604d3edc309" name="Changes" comment="NodeCard, NodePlayer and Node classes implemented.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/NodePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/NodePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spadeGame/GameUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spadeGame/GameUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/LinkedListCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/LinkedListCard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +77,8 @@
       <workItem from="1680018491173" duration="3064000" />
       <workItem from="1680022752855" duration="113000" />
       <workItem from="1680030821686" duration="554000" />
-      <workItem from="1680205976710" duration="693000" />
+      <workItem from="1680205976710" duration="954000" />
+      <workItem from="1680294985864" duration="1149000" />
     </task>
     <task id="LOCAL-00001" summary="First version">
       <created>1679170995374</created>
@@ -149,7 +150,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680031366371</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="generateDeck and generatePlayers methods implemented.">
+      <created>1680206711295</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680206711295</updated>
+    </task>
+    <task id="LOCAL-00012" summary="NodeCard, NodePlayer and Node classes implemented.">
+      <created>1680206889163</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680206889163</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +181,8 @@
     <MESSAGE value="version 1.0.0&#10;last comments added, LinkedListPlayer and NodePlayer added." />
     <MESSAGE value="version 1.0.1&#10;numOfTrickWins added as attribute to Player,&#10;calculateScores method added to GameUtilities" />
     <MESSAGE value="version 1.0.1&#10;Player.getNumOfTrickWon, Player.getPlayerType and Player.setNumOfTrickWon methods added to player" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 1.0.1&#10;Player.getNumOfTrickWon, Player.getPlayerType and Player.setNumOfTrickWon methods added to player" />
+    <MESSAGE value="generateDeck and generatePlayers methods implemented." />
+    <MESSAGE value="NodeCard, NodePlayer and Node classes implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="NodeCard, NodePlayer and Node classes implemented." />
   </component>
 </project>
