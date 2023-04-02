@@ -47,6 +47,8 @@ public class LinkedList {
         if (size == 0){
             head = newNode;
             tail = newNode;
+            size ++;
+            return;
         }
         newNode.setNext(head);
         head = newNode;
@@ -77,6 +79,27 @@ public class LinkedList {
         }
         head = head.getNext();
         size --;
+
+    }
+
+    /**
+     * removes the given number from the list
+     * @param number number will be removed
+     */
+    public void remove(int number){
+        Node pre = null;
+        Node tmp = head;
+
+        while (tmp != null){
+            if (tmp.getData() == number){
+                pre.setNext(tmp.getNext());
+                size --;
+                return;
+            }else {
+                pre = tmp;
+                tmp = tmp.getNext();
+            }
+        }
 
     }
 }

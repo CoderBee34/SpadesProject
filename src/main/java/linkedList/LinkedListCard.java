@@ -27,16 +27,23 @@ public class LinkedListCard {
     /**
      *
      * @param index index of nodecard that wanted
-     * @return returns the nodecard given index
+     * @return returns the nodecard in the given index
      */
     public NodeCard get(int index){
+
+        if (index < 0)
+            return null;
+        if (index == 0)
+            return getHead();
+        if (index == size - 1)
+            return getLast();
+
         NodeCard tmp = head;
         int i = 0;
 
         while (i<index){
             tmp = tmp.getNext();
         }
-
         return tmp;
     }
 
@@ -65,6 +72,8 @@ public class LinkedListCard {
         if (size == 0){
             head = newNode;
             tail = newNode;
+            size ++;
+            return;
         }
         newNode.setNext(head);
         head = newNode;
@@ -96,7 +105,6 @@ public class LinkedListCard {
         }
         head = head.getNext();
         size --;
-
     }
 
     /**
@@ -106,8 +114,8 @@ public class LinkedListCard {
     public String toString(){
         String str = "";
         for (int i = 0; i < size;i++){
-            str = str + ((i+1) +" - ") +get(i);
-            if (i % 3 == 0){
+            str = str + ((i+1) +" - ") + get(i).getData();
+            if (i % 3 == 0 && i != 0){
                 str = str + "\n";
             }
         }
