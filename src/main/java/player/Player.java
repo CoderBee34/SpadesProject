@@ -18,6 +18,12 @@ public class Player {
      * @param playerType in order to know the type of player
      */
     public Player(String name, PlayerType playerType) {
+        this.name = name;
+        this.playerType = playerType;
+        score = 0;
+        numOfTrickWon = 0;
+        bid = 0;
+        hand = null;
     }
 
     /**
@@ -26,7 +32,7 @@ public class Player {
      */
 
     public int getBid(){
-        return 0;
+        return bid;
     }
 
     /**
@@ -35,6 +41,7 @@ public class Player {
      */
 
     public void setBid(int bid){
+        this.bid = bid;
     }
 
     /**
@@ -43,7 +50,7 @@ public class Player {
      */
 
     public int getScore(){
-        return 0;
+        return score;
     }
 
     /**
@@ -52,6 +59,7 @@ public class Player {
      */
 
     public void setScore(int score){
+        this.score = score;
     }
 
     /**
@@ -60,7 +68,7 @@ public class Player {
      */
 
     public LinkedListCard getHand(){
-        return null;
+        return hand;
     }
 
     /**
@@ -68,6 +76,7 @@ public class Player {
      * @param hand give a hand to player
      */
     public void setHand(LinkedListCard hand){
+        this.hand = hand;
     }
 
     /**
@@ -76,7 +85,7 @@ public class Player {
      */
 
     public String getName(){
-        return null;
+        return name;
     }
 
     /**
@@ -84,7 +93,7 @@ public class Player {
      * @return returns the type of player either AI or real
      */
     public PlayerType getPlayerType() {
-        return null;
+        return playerType;
     }
 
     /**
@@ -92,7 +101,7 @@ public class Player {
      * @return returns the number of trick won byplayer
      */
     public int getNumOfTrickWon() {
-        return 0;
+        return numOfTrickWon;
     }
 
     /**
@@ -100,6 +109,7 @@ public class Player {
      * @param numOfTrickWon sets number of trick won by given parameter
      */
     public void setNumOfTrickWon(int numOfTrickWon) {
+        this.numOfTrickWon = numOfTrickWon;
     }
 
     /**
@@ -107,7 +117,9 @@ public class Player {
      * @return returns the information of the player as string
      */
     public String toString(){
-        return null;
+        String str = "";
+        str = str + name;
+        return str;
     }
 
 }

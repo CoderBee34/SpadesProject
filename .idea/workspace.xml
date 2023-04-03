@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="660629e3-1b77-4c3f-a671-a604d3edc309" name="Changes" comment="LinkedList and LinkedListCard classes implemented.">
+    <list default="true" id="660629e3-1b77-4c3f-a671-a604d3edc309" name="Changes" comment="LinkedListPlayer implemented.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/LinkedListCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/LinkedListCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/LinkedListPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/LinkedListPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spadeGame/GameUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spadeGame/GameUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spadeGame/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spadeGame/Card.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +84,8 @@
       <workItem from="1680296552057" duration="16000" />
       <workItem from="1680344728883" duration="7000" />
       <workItem from="1680427904256" duration="957000" />
-      <workItem from="1680435436832" duration="1567000" />
+      <workItem from="1680435436832" duration="1818000" />
+      <workItem from="1680553400839" duration="766000" />
     </task>
     <task id="LOCAL-00001" summary="First version">
       <created>1679170995374</created>
@@ -177,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680296161393</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="LinkedListPlayer implemented.">
+      <created>1680437028965</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1680437028965</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +205,7 @@
     <MESSAGE value="generateDeck and generatePlayers methods implemented." />
     <MESSAGE value="NodeCard, NodePlayer and Node classes implemented." />
     <MESSAGE value="LinkedList and LinkedListCard classes implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="LinkedList and LinkedListCard classes implemented." />
+    <MESSAGE value="LinkedListPlayer implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="LinkedListPlayer implemented." />
   </component>
 </project>

@@ -45,10 +45,7 @@ public class LinkedList {
      */
     public void insertFirst(Node newNode) {
         if (size == 0){
-            head = newNode;
             tail = newNode;
-            size ++;
-            return;
         }
         newNode.setNext(head);
         head = newNode;
@@ -72,10 +69,7 @@ public class LinkedList {
             return;
         }
         if(size == 1){
-            head = null;
             tail = null;
-            size --;
-            return;
         }
         head = head.getNext();
         size --;
@@ -95,7 +89,7 @@ public class LinkedList {
                 pre.setNext(tmp.getNext());
                 size --;
                 return;
-            }else {
+            } else {
                 pre = tmp;
                 tmp = tmp.getNext();
             }
