@@ -77,21 +77,51 @@ public class LinkedList {
     }
 
     /**
-     * removes the given number from the list
-     * @param number number will be removed
+     *
+     * @param index index of node that wanted
+     * @return returns the node in the given index
      */
-    public void remove(int number){
+    public Node get(int index){
+
+        if (index < 0 || index >= size)
+            return null;
+        if (index == 0)
+            return getHead();
+        if (index == size - 1)
+            return getLast();
+
+        Node tmp = head;
+        int i = 0;
+
+        while (i<index){
+            tmp = tmp.getNext();
+        }
+        return tmp;
+    }
+
+
+    /**
+     * removes the given number from the list
+     * @param index node in the given index will be removed
+     */
+    public void remove(int index){
         Node pre = null;
         Node tmp = head;
 
+        int i = 0;
         while (tmp != null){
-            if (tmp.getData() == number){
-                pre.setNext(tmp.getNext());
-                size --;
+            if (i == index){
+                if (pre != null) {
+                    pre.setNext(tmp.getNext());
+                    size--;
+                } else {
+                    deleteFirst();
+                }
                 return;
             } else {
                 pre = tmp;
                 tmp = tmp.getNext();
+                i++;
             }
         }
 

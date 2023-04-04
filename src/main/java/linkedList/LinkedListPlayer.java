@@ -32,7 +32,7 @@ public class LinkedListPlayer {
      */
     public NodePlayer get(int index){
 
-        if (index < 0)
+        if (index < 0 || index >= size)
             return null;
         if (index == 0)
             return getHead();
@@ -71,10 +71,7 @@ public class LinkedListPlayer {
     public void insertFirst(NodePlayer newNode) {
 
         if (size == 0){
-            head = newNode;
             tail = newNode;
-            size ++;
-            return;
         }
         newNode.setNext(head);
         head = newNode;

@@ -15,11 +15,18 @@ public class GameUtilities {
 
     public LinkedListCard generateDeck(){
         LinkedListCard cardDeck = new LinkedListCard();
-        CardSuit[] suits = {CardSuit.CLUB, CardSuit.DIAMOND, CardSuit.HEART, CardSuit.SPADE};
 
-        for (int i = 0; i< suits.length;i++){
+        for (int i = 0; i< 4;i++){
             for (int j = 2; j < 15; j++){
-                cardDeck.insertFirst(new NodeCard(new Card(j, suits[i])));
+                if (i == 0){
+                    cardDeck.insertFirst(new NodeCard(new Card(j, CardSuit.DIAMOND)));
+                } else if (i == 1) {
+                    cardDeck.insertFirst(new NodeCard(new Card(j, CardSuit.CLUB)));
+                } else if (i == 2) {
+                    cardDeck.insertFirst(new NodeCard(new Card(j, CardSuit.HEART)));
+                } else if (i == 3) {
+                    cardDeck.insertFirst(new NodeCard(new Card(j, CardSuit.SPADE)));
+                }
             }
         }
 
@@ -63,6 +70,29 @@ public class GameUtilities {
      */
     public void setPlayersReady(LinkedListPlayer players, LinkedListCard deck){
 
+        Random rnd = new Random();
+
+        for (int i = 0; i < players.getSize(); i++){
+            Player player = players.get(i).getData();
+            player.setBid(rnd.nextInt(3,7));
+            player.setNumOfTrickWon(0);
+        }
+
+
+        for (int i = 0; i < 52; i++){
+            int random =rnd.nextInt(52-i);
+            NodeCard tmp = deck.remove(random);
+            deck.insertFirst(tmp);
+        }
+        int counter = 0;
+        for (int i = 0; i < players.getSize(); i++){
+            LinkedListCard hand = players.get(i).getData().getHand();
+            for (int j = 0; j < 13; j++){
+                hand.insertFirst(deck.get(counter));
+                counter ++;
+            }
+
+        }
     }
 
     /**
@@ -71,7 +101,18 @@ public class GameUtilities {
      * @return returns the player that won if no one won the game then returns null
      */
     public Player isThereWinner(LinkedListPlayer players){
-        return null;
+
+        int maxPoint = Integer.MIN_VALUE;
+        Player winner = null;
+
+        for (int i = 0; i < players.getSize(); i ++){
+            int score = players.get(i).getData().getScore();
+            if (score > 500 && score > maxPoint){
+                maxPoint = score;
+                winner = players.get(i).getData();
+            }
+        }
+        return winner;
     }
 
     /**
@@ -79,8 +120,16 @@ public class GameUtilities {
      */
     public void calculateScores(LinkedListPlayer players){
 
+        for (int i = 0; i < players.getSize(); i++){
+            Player player = players.get(i).getData();
+            int numOfWins = player.getNumOfTrickWon();
+            int bid = player.getBid();
 
+            if (numOfWins >= bid){
+                player.setScore(player.getScore() + bid * 10 + (numOfWins - bid));
+            } else if (numOfWins < bid) {
+                player.setScore(player.getScore() - bid * 10);
+            }
+        }
     }
-
-
 }

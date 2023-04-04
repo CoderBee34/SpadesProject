@@ -31,7 +31,7 @@ public class LinkedListCard {
      */
     public NodeCard get(int index){
 
-        if (index < 0)
+        if (index < 0 || index > size)
             return null;
         if (index == 0)
             return getHead();
@@ -46,6 +46,38 @@ public class LinkedListCard {
         }
         return tmp;
     }
+
+    /**
+     * removes the given number from the list
+     * @param index node in the given index will be removed
+     */
+    public NodeCard remove(int index){
+        NodeCard pre = null;
+        NodeCard tmp = head;
+
+        int i = 0;
+        while (tmp != null){
+            if (i == index){
+                if (pre != null) {
+                    pre.setNext(tmp.getNext());
+                    size--;
+                    return tmp;
+                } else {
+                    NodeCard tmp2 = head;
+                    deleteFirst();
+                    return tmp2;
+                }
+
+            } else {
+                pre = tmp;
+                tmp = tmp.getNext();
+                i++;
+            }
+        }
+        return null;
+
+    }
+
 
     /**
      *
