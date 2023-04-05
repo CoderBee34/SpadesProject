@@ -29,6 +29,7 @@ public class SpadeGame {
             gameUtilities.calculateScores(players);
             winner = gameUtilities.whoIsWinner(players);
         }
+        System.out.println("\n" + players + "\n");
         System.out.println(winner.getName() + " won the game with "+ winner.getScore() + " points");
 
     }

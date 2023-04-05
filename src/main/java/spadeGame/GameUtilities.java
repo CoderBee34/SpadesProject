@@ -4,6 +4,7 @@ import linkedList.*;
 import player.Player;
 import player.PlayerType;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -62,7 +63,6 @@ public class GameUtilities {
     public Card playCard(Player player, Card initialCard, boolean isBroken){
 
         LinkedListCard deck = player.getHand();
-        Scanner inp = new Scanner(System.in);
         Card cardPlayed = null;
         boolean anyCardObeyRules = false;
 
@@ -95,26 +95,26 @@ public class GameUtilities {
 
             System.out.println("Enter the number of card that you want to play");
 
-            int playedCardIndex = inp.nextInt();
+            int playedCardIndex = getInput();
             while (playedCardIndex < 0 || playedCardIndex >= deck.getSize()){
                 System.out.println("Invalid number please enter again");
-                playedCardIndex = inp.nextInt();
+                playedCardIndex = getInput();
             }
             while (!listOfCardsThatObeysRules.contains(playedCardIndex)){
 
                 System.out.println("This card does not obey rules play another card");
-                playedCardIndex = inp.nextInt();
+                playedCardIndex = getInput();
                 while (playedCardIndex < 0 || playedCardIndex >= deck.getSize()){
                     System.out.println("Invalid number please enter again");
-                    playedCardIndex = inp.nextInt();
+                    playedCardIndex = getInput();
                 }
 
             }
             if (listOfCardsThatObeysRules.isEmpty()){
-                playedCardIndex = inp.nextInt();
+                playedCardIndex = getInput();
                 while (playedCardIndex < 0 || playedCardIndex >= deck.getSize()){
                     System.out.println("Invalid number please enter again");
-                    playedCardIndex = inp.nextInt();
+                    playedCardIndex = getInput();
                 }
             }
             cardPlayed = deck.get(playedCardIndex).getData();
@@ -167,7 +167,6 @@ public class GameUtilities {
      */
     public void setPlayersReady(LinkedListPlayer players, LinkedListCard deck){
 
-        Scanner inp = new Scanner(System.in);
         Random rnd = new Random();
 
 
@@ -194,11 +193,11 @@ public class GameUtilities {
             Player player = players.get(i).getData();
             if (player.getPlayerType() == PlayerType.PLAYER_REAL){
                 System.out.println("Enter the number of your bids");
-                int bids = inp.nextInt();
+                int bids = getInput();
 
                 while (bids < 0 || bids > 13){
                     System.out.println("Invalid bids number enter again");
-                    bids = inp.nextInt();
+                    bids = getInput();
                 }
                 player.setBid(bids);
 
@@ -221,7 +220,7 @@ public class GameUtilities {
 
         for (int i = 0; i < players.getSize(); i ++){
             int score = players.get(i).getData().getScore();
-            if (score > 500 && score > maxPoint){
+            if (score >= 500 && score > maxPoint){
                 maxPoint = score;
                 winner = players.get(i).getData();
             }
@@ -245,5 +244,20 @@ public class GameUtilities {
                 player.setScore(player.getScore() - bid * 10);
             }
         }
+    }
+
+    /**
+     * gets input from user also catches the possible exceptions
+     * @return returns input given by user
+     */
+    public int getInput(){
+        int input;
+        try {
+            input = (new Scanner(System.in)).nextInt();
+        } catch (InputMismatchException e){
+            System.out.println("Enter a integer please");
+            return getInput();
+        }
+        return input;
     }
 }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="660629e3-1b77-4c3f-a671-a604d3edc309" name="Changes" comment="some little updates.">
+    <list default="true" id="660629e3-1b77-4c3f-a671-a604d3edc309" name="Changes" comment="small bug fixes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/LinkedListCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/LinkedListCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spadeGame/GameUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spadeGame/GameUtilities.java" afterDir="false" />
@@ -107,7 +107,8 @@
       <workItem from="1680553400839" duration="9958000" />
       <workItem from="1680645381395" duration="2000" />
       <workItem from="1680716102188" duration="6901000" />
-      <workItem from="1680724140219" duration="4398000" />
+      <workItem from="1680724140219" duration="4473000" />
+      <workItem from="1680733539233" duration="1201000" />
     </task>
     <task id="LOCAL-00001" summary="First version">
       <created>1679170995374</created>
@@ -256,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680725821398</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="small bug fixes.">
+      <created>1680728615343</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1680728615343</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +292,7 @@
     <MESSAGE value="some bug fixes." />
     <MESSAGE value="proudly committing the last version" />
     <MESSAGE value="some little updates." />
-    <option name="LAST_COMMIT_MESSAGE" value="some little updates." />
+    <MESSAGE value="small bug fixes." />
+    <option name="LAST_COMMIT_MESSAGE" value="small bug fixes." />
   </component>
 </project>
