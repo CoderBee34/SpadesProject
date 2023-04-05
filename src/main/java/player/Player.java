@@ -118,7 +118,7 @@ public class Player {
      */
     public String toString(){
         String str = "Name: ";
-        str = str + name + ", Bids: " + bid + ", Score: " + score + ", Hand: \n" + hand;
+        str = str + name + ", Bids: " + bid + ", Score: " + score + ", Trick wins: " + numOfTrickWon + ", Hand: \n\n" + hand;
         return str;
     }
 

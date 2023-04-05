@@ -111,7 +111,7 @@ public class LinkedListPlayer {
         String str = "";
         for (int i = 0; i < size; i++){
             Player tmp = get(i).getData();
-            str = str + ((i + 1)+" - ") + tmp + "\n";
+            str = str + ((i + 1)+" - ") + tmp + "\n-----------------------------------------------------------------------------------------\n";
         }
 
         return str;

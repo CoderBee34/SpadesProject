@@ -71,7 +71,12 @@ public class SpadeGame {
                     trickBroken = true;
                 }
                 if (currentCard.getSuit() == initialCard.getSuit()){
-
+                    if (winnerCard.getSuit() != CardSuit.SPADE){
+                        if (currentCard.getValue() > winnerCard.getValue()){
+                            winnerCard = currentCard;
+                            winnerOfTrick = playing;
+                        }
+                    }
                 } else if (currentCard.getSuit() == CardSuit.SPADE) {
                     if (winnerCard.getSuit() == CardSuit.SPADE){
                         if (currentCard.getValue() > winnerCard.getValue()){
@@ -83,19 +88,12 @@ public class SpadeGame {
                         winnerCard = currentCard;
                         winnerOfTrick = playing;
                     }
-                } else if (currentCard.getSuit() == initialCard.getSuit()) {
-
-                    if (winnerCard.getSuit() != CardSuit.SPADE){
-                        if (currentCard.getValue() > winnerCard.getValue()){
-                            winnerCard = currentCard;
-                            winnerOfTrick = playing;
-                        }
-                    }
                 }
 
             }
         }
         winnerOfTrick.setNumOfTrickWon(winnerOfTrick.getNumOfTrickWon() + 1);
+        System.out.println("\n" + winnerOfTrick.getName() + " won the trick");
         return trickBroken;
     }
 
@@ -103,7 +101,8 @@ public class SpadeGame {
      * prints the all hands of players
      */
     private void printGame(){
-        System.out.println(players);
+        System.out.print("\n"+players);
+
     }
 
     public static void main(String args[]){
