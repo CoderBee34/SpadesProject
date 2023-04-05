@@ -111,7 +111,11 @@ public class GameUtilities {
 
             }
             if (listOfCardsThatObeysRules.isEmpty()){
-                playedCardIndex = 0;
+                playedCardIndex = inp.nextInt();
+                while (playedCardIndex < 0 || playedCardIndex >= deck.getSize()){
+                    System.out.println("Invalid number please enter again");
+                    playedCardIndex = inp.nextInt();
+                }
             }
             cardPlayed = deck.get(playedCardIndex).getData();
             deck.remove(playedCardIndex);
@@ -188,7 +192,6 @@ public class GameUtilities {
 
         for (int i = 0; i < players.getSize(); i++){
             Player player = players.get(i).getData();
-
             if (player.getPlayerType() == PlayerType.PLAYER_REAL){
                 System.out.println("Enter the number of your bids");
                 int bids = inp.nextInt();
@@ -202,8 +205,6 @@ public class GameUtilities {
             }else {
                 player.setBid(rnd.nextInt(0,6));
             }
-
-            player.setNumOfTrickWon(0);
 
         }
     }

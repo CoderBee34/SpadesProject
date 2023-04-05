@@ -74,13 +74,22 @@ public class LinkedListCard {
      * @param index node in the given index will be removed
      */
     public void remove(int index){
+
+        NodeCard pre = null;
+        NodeCard tmp = head;
+
         if (index == 0){
             deleteFirst();
             return;
         }
 
-        NodeCard pre = null;
-        NodeCard tmp = head;
+        if (index == size - 1){
+            NodeCard node = get(size-2);
+            node.setNext(null);
+            tail = node;
+            size --;
+        }
+
 
         int i = 0;
         while (tmp != null){
@@ -94,7 +103,6 @@ public class LinkedListCard {
                 i++;
             }
         }
-        return;
 
     }
 
