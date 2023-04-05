@@ -23,7 +23,7 @@ public class Player {
         score = 0;
         numOfTrickWon = 0;
         bid = 0;
-        hand = null;
+        hand = new LinkedListCard();
     }
 
     /**

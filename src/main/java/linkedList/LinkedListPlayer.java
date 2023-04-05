@@ -42,8 +42,10 @@ public class LinkedListPlayer {
         NodePlayer tmp = head;
         int i = 0;
 
-        while (i<index){
+        while (i<index ){
+
             tmp = tmp.getNext();
+            i++;
         }
         return tmp;
     }

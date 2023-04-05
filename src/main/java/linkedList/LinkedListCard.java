@@ -46,6 +46,7 @@ public class LinkedListCard {
 
         while (i<index){
             tmp = tmp.getNext();
+            i ++;
         }
         return tmp;
     }
