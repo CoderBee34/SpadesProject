@@ -17,7 +17,7 @@ public class GameUtilities {
     public LinkedListCard generateDeck(){
         LinkedListCard cardDeck = new LinkedListCard();
 
-        for (int i = 0; i< 4;i++){
+        for (int i = 0; i < 4;i++){
             for (int j = 2; j < 15; j++){
                 if (i == 0){
                     cardDeck.insertFirst(new NodeCard(new Card(j, CardSuit.DIAMOND)));
@@ -114,6 +114,8 @@ public class GameUtilities {
                 playedCardIndex = 0;
             }
             cardPlayed = deck.get(playedCardIndex).getData();
+            deck.remove(playedCardIndex);
+            System.out.println(player.getName() + " played " + cardPlayed);
 
         }
         return cardPlayed;
@@ -161,25 +163,43 @@ public class GameUtilities {
      */
     public void setPlayersReady(LinkedListPlayer players, LinkedListCard deck){
 
+        Scanner inp = new Scanner(System.in);
         Random rnd = new Random();
 
         for (int i = 0; i < players.getSize(); i++){
             Player player = players.get(i).getData();
-            player.setBid(rnd.nextInt(0,6));
+
+            if (player.getPlayerType() == PlayerType.PLAYER_REAL){
+                System.out.println("Enter the number of your bids");
+                int bids = inp.nextInt();
+
+                while (bids < 0 || bids > 13){
+                    System.out.println("Invalid bids number enter again");
+                    bids = inp.nextInt();
+                }
+                player.setBid(bids);
+
+            }else {
+                player.setBid(rnd.nextInt(0,6));
+            }
+
             player.setNumOfTrickWon(0);
+
         }
 
 
         for (int i = 0; i < 52; i++){
-            int random =rnd.nextInt(52-i);
-            NodeCard tmp = deck.remove(random);
+            int random =rnd.nextInt(52);
+            NodeCard tmp = deck.get(random);
+            deck.remove(random);
             deck.insertFirst(tmp);
         }
         int counter = 0;
         for (int i = 0; i < players.getSize(); i++){
             LinkedListCard hand = players.get(i).getData().getHand();
             for (int j = 0; j < 13; j++){
-                hand.insertFirst(deck.get(counter));
+                Card card = deck.get(counter).getData();
+                hand.insertFirst(new NodeCard(card));
                 counter ++;
             }
 

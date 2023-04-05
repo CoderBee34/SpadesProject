@@ -44,6 +44,8 @@ public class Card {
             str = "Queen";
         } else if (value == 13) {
             str = "King";
+        } else if (value == 14) {
+            str = "Ace";
         }
 
         str = str + " of ";
