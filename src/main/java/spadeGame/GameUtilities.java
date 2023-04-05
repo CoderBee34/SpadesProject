@@ -5,6 +5,7 @@ import player.Player;
 import player.PlayerType;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class GameUtilities {
 
@@ -53,13 +54,103 @@ public class GameUtilities {
 
     /**
      *
-     * @param isSpadeBreaken considering this information card will be played
+     * @param initialCard considering this information card will be played
      * @param player which player is going to play
      * @return returns the card that played by given player
      */
 
-    public Card playCard(Player player, boolean isSpadeBreaken){
-        return null;
+    public Card playCard(Player player, Card initialCard, boolean isBroken){
+
+        LinkedListCard deck = player.getHand();
+        Scanner inp = new Scanner(System.in);
+        Card cardPlayed = null;
+        boolean anyCardObeyRules = false;
+
+        if (player.getPlayerType() == PlayerType.PLAYER_AI){
+            for (int i = 0; i < deck.getSize(); i++){
+                Card card = deck.get(i).getData();
+
+                if (isCardObeysRules(card, initialCard, isBroken, deck)){
+                    cardPlayed = card;
+                    deck.remove(i);
+                    anyCardObeyRules = true;
+                    break;
+                }
+            }
+            if (!anyCardObeyRules){
+                cardPlayed = deck.get(0).getData();
+                deck.remove(0);
+            }
+            System.out.println(player.getName() + " played " + cardPlayed);
+
+        } else if (player.getPlayerType() == PlayerType.PLAYER_REAL) {
+
+            LinkedList listOfCardsThatObeysRules = new LinkedList();
+
+            for (int i = 0; i < deck.getSize(); i++){
+                if (isCardObeysRules(deck.get(i).getData(), initialCard, isBroken, deck)){
+                    listOfCardsThatObeysRules.insertFirst(new Node(i));
+                }
+            }
+
+            System.out.println("Enter the number of card that you want to play");
+
+            int playedCardIndex = inp.nextInt();
+            while (playedCardIndex < 0 || playedCardIndex >= deck.getSize()){
+                System.out.println("Invalid number please enter again");
+                playedCardIndex = inp.nextInt();
+            }
+            while (!listOfCardsThatObeysRules.contains(playedCardIndex)){
+
+                System.out.println("This card does not obey rules play another card");
+                playedCardIndex = inp.nextInt();
+                while (playedCardIndex < 0 || playedCardIndex >= deck.getSize()){
+                    System.out.println("Invalid number please enter again");
+                    playedCardIndex = inp.nextInt();
+                }
+
+            }
+            if (listOfCardsThatObeysRules.isEmpty()){
+                playedCardIndex = 0;
+            }
+            cardPlayed = deck.get(playedCardIndex).getData();
+
+        }
+        return cardPlayed;
+    }
+
+    /**
+     *
+     * Checks the given card obey the rules for the given instructions and paramaters
+     *
+     * @return returns true if obey otherwise return false
+     */
+
+    private boolean isCardObeysRules(Card card, Card initialCard, boolean isBroken, LinkedListCard deck){
+        boolean isObey;
+
+        if (isBroken){
+            if (initialCard != null){
+                if (deck.containsSuitType(initialCard.getSuit())){
+                    isObey = (card.getSuit() == initialCard.getSuit()) ? true : false;
+                } else {
+                    isObey = true;
+                }
+            } else {
+                isObey = true;
+            }
+        } else {
+            if (initialCard != null){
+                if (deck.containsSuitType(initialCard.getSuit())){
+                    isObey = (card.getSuit() == initialCard.getSuit()) ? true : false;
+                } else {
+                    isObey = (card.getSuit() == CardSuit.SPADE) ? true : false;
+                }
+            } else {
+                isObey = (card.getSuit() != CardSuit.SPADE) ? true : false;
+            }
+        }
+        return isObey;
     }
 
 
@@ -74,7 +165,7 @@ public class GameUtilities {
 
         for (int i = 0; i < players.getSize(); i++){
             Player player = players.get(i).getData();
-            player.setBid(rnd.nextInt(3,7));
+            player.setBid(rnd.nextInt(0,6));
             player.setNumOfTrickWon(0);
         }
 
@@ -100,7 +191,7 @@ public class GameUtilities {
      * @param players players that will be checked
      * @return returns the player that won if no one won the game then returns null
      */
-    public Player isThereWinner(LinkedListPlayer players){
+    public Player whoIsWinner(LinkedListPlayer players){
 
         int maxPoint = Integer.MIN_VALUE;
         Player winner = null;

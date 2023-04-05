@@ -99,6 +99,26 @@ public class LinkedList {
         return tmp;
     }
 
+    /**
+     *
+     * @param number checks given number occurs in list or not
+     * @return return true if number occurs otherwise return false
+     */
+    public boolean contains(int number){
+        Node tmp = head;
+        boolean contains = false;
+
+        while (tmp != null){
+            if (tmp.getData() == number){
+                contains = true;
+                break;
+            }
+            tmp = tmp.getNext();
+        }
+
+        return contains;
+    }
+
 
     /**
      * removes the given number from the list

@@ -117,8 +117,8 @@ public class Player {
      * @return returns the information of the player as string
      */
     public String toString(){
-        String str = "";
-        str = str + name;
+        String str = "Name: ";
+        str = str + name + ", Bids: " + bid + ", Score: " + score + ", Hand: \n" + hand;
         return str;
     }
 

@@ -1,6 +1,9 @@
 package linkedList;
 
 import spadeGame.Card;
+import spadeGame.CardSuit;
+
+import javax.swing.*;
 
 public class LinkedListCard {
     private NodeCard head;
@@ -45,6 +48,24 @@ public class LinkedListCard {
             tmp = tmp.getNext();
         }
         return tmp;
+    }
+
+    /**
+     * check is there any card that has the given suit type
+     * @param suit type that searched for
+     * @return return true if there is card that has given suit type otherwise return false
+     */
+    public boolean containsSuitType(CardSuit suit){
+        boolean isContain = false;
+
+        for (int i = 0; i < size; i++ ){
+            if (get(i).getData().getSuit() == suit){
+                isContain = true;
+                break;
+            }
+        }
+
+        return isContain;
     }
 
     /**
@@ -141,13 +162,13 @@ public class LinkedListCard {
 
     /**
      *
-     * @return returns the information of linkedlistcard in othername deck, lists the all card in the deck
+     * @return returns the information of linkedlistcard in othername deck, lists the all card in the deck as string
      */
     public String toString(){
         String str = "";
         for (int i = 0; i < size;i++){
-            str = str + ((i+1) +" - ") + get(i).getData();
-            if (i % 3 == 0 && i != 0){
+            str = str + (i +" - ") + get(i).getData() + "    ";
+            if (i % 4 == 0 && i != 0){
                 str = str + "\n";
             }
         }
