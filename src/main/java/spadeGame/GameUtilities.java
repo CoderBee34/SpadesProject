@@ -166,6 +166,26 @@ public class GameUtilities {
         Scanner inp = new Scanner(System.in);
         Random rnd = new Random();
 
+
+        for (int i = 0; i < 52; i++){
+            int random =rnd.nextInt(52);
+            NodeCard tmp = deck.get(random);
+            deck.remove(random);
+            deck.insertFirst(tmp);
+        }
+        int counter = 0;
+        for (int i = 0; i < players.getSize(); i++){
+            LinkedListCard hand = players.get(i).getData().getHand();
+            for (int j = 0; j < 13; j++){
+                Card card = deck.get(counter).getData();
+                hand.insertFirst(new NodeCard(card));
+                counter ++;
+            }
+
+        }
+
+        System.out.println("\n"+players);
+
         for (int i = 0; i < players.getSize(); i++){
             Player player = players.get(i).getData();
 
@@ -184,24 +204,6 @@ public class GameUtilities {
             }
 
             player.setNumOfTrickWon(0);
-
-        }
-
-
-        for (int i = 0; i < 52; i++){
-            int random =rnd.nextInt(52);
-            NodeCard tmp = deck.get(random);
-            deck.remove(random);
-            deck.insertFirst(tmp);
-        }
-        int counter = 0;
-        for (int i = 0; i < players.getSize(); i++){
-            LinkedListCard hand = players.get(i).getData().getHand();
-            for (int j = 0; j < 13; j++){
-                Card card = deck.get(counter).getData();
-                hand.insertFirst(new NodeCard(card));
-                counter ++;
-            }
 
         }
     }
