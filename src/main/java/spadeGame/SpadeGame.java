@@ -50,6 +50,7 @@ public class SpadeGame {
 
     /**
      * it runs a wile loop until every player play a card then using gameUtilities to manage the game
+     * @return returns true if the hand is broken otherwise returns false
      */
     private boolean playTrick(boolean isBroken){
 
@@ -69,7 +70,7 @@ public class SpadeGame {
                 winnerCard = initialCard;
             } else {
                 currentCard = gameUtilities.playCard(playing, initialCard, trickBroken);
-                if (currentCard.getSuit() == CardSuit.SPADE){
+                if (currentCard.getSuit() == CardSuit.SPADE || initialCard.getSuit() == CardSuit.SPADE){
                     trickBroken = true;
                 }
                 if (currentCard.getSuit() == initialCard.getSuit()){
@@ -79,7 +80,8 @@ public class SpadeGame {
                             winnerOfTrick = playing;
                         }
                     }
-                } else if (currentCard.getSuit() == CardSuit.SPADE) {
+                }
+                if (currentCard.getSuit() == CardSuit.SPADE) {
                     if (winnerCard.getSuit() == CardSuit.SPADE){
                         if (currentCard.getValue() > winnerCard.getValue()){
                             winnerCard = currentCard;

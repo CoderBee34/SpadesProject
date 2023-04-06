@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="660629e3-1b77-4c3f-a671-a604d3edc309" name="Changes" comment="small bug fixes.">
+    <list default="true" id="660629e3-1b77-4c3f-a671-a604d3edc309" name="Changes" comment="getInput method added to GameUtilities to handle the InputMıssmachException and to get input from PlayerType.Real">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/LinkedListCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/LinkedListCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spadeGame/GameUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spadeGame/GameUtilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spadeGame/SpadeGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spadeGame/SpadeGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +106,8 @@
       <workItem from="1680645381395" duration="2000" />
       <workItem from="1680716102188" duration="6901000" />
       <workItem from="1680724140219" duration="4473000" />
-      <workItem from="1680733539233" duration="1201000" />
+      <workItem from="1680733539233" duration="1516000" />
+      <workItem from="1680793369379" duration="2076000" />
     </task>
     <task id="LOCAL-00001" summary="First version">
       <created>1679170995374</created>
@@ -264,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680728615343</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="getInput method added to GameUtilities to handle the InputMıssmachException and to get input from PlayerType.Real">
+      <created>1680734812896</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1680734812896</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +299,7 @@
     <MESSAGE value="proudly committing the last version" />
     <MESSAGE value="some little updates." />
     <MESSAGE value="small bug fixes." />
-    <option name="LAST_COMMIT_MESSAGE" value="small bug fixes." />
+    <MESSAGE value="getInput method added to GameUtilities to handle the InputMıssmachException and to get input from PlayerType.Real" />
+    <option name="LAST_COMMIT_MESSAGE" value="getInput method added to GameUtilities to handle the InputMıssmachException and to get input from PlayerType.Real" />
   </component>
 </project>
