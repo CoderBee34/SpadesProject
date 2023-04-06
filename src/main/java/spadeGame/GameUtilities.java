@@ -190,6 +190,10 @@ public class GameUtilities {
         System.out.println("\n"+players);
 
         for (int i = 0; i < players.getSize(); i++){
+            players.get(i).getData().setNumOfTrickWon(0);
+        }
+
+        for (int i = 0; i < players.getSize(); i++){
             Player player = players.get(i).getData();
             if (player.getPlayerType() == PlayerType.PLAYER_REAL){
                 System.out.println("Enter the number of your bids");

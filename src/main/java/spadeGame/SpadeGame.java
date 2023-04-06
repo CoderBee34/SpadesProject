@@ -39,6 +39,7 @@ public class SpadeGame {
      */
     private void playRound(){
         gameUtilities.setPlayersReady(players, deck);
+        System.out.println("------------------------------------New Round Started------------------------------------");
         boolean isBroken = false;
 
         for (int i = 0; i < 13; i++){
